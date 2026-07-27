@@ -1,0 +1,3 @@
+experiment_group,signups,started_session,started_lesson,activated,paywall_seen,trial_started,paid,activation_rate,paid_conversion
+control,2567,2532,2488,1565,2463,617,479,0.6096610829762369,0.18659914296844565
+smart_onboarding,2574,2558,2530,2004,2532,799,670,0.7785547785547785,0.2602952602952603

@@ -1,0 +1,6 @@
+test,statistic,p_value,ci_low,ci_high
+paid_conversion_95_ci,0.22349737405174092,,0.21210957103549813,0.2348851770679837
+arpu_95_ci,387.4129546780782,,362.0278944925186,412.79801486363783
+study_minutes_activated_vs_not_ttest,61.54990148137177,0.0,,
+device_vs_payment_failed_chi_square,5.993098419150859,0.11194648521831314,,
+lessons_completed_vs_quiz_corr,0.6724940639437027,,,
