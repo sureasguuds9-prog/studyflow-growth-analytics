@@ -36,7 +36,8 @@ studyflow-growth-analytics/
 │   ├── methodology.md
 │   └── interview_defense.md
 ├── notebooks/
-│   └── 01_studyflow_product_analysis.ipynb
+│   ├── 01_studyflow_product_analysis.ipynb
+│   └── 02_full_python_statistics_sql_ab_analysis.ipynb
 ├── reports/
 │   ├── analytical_report.md
 │   ├── sql_queries_with_answers.md
@@ -52,17 +53,12 @@ studyflow-growth-analytics/
 ## Как воспроизвести
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 python src/generate_data.py
 python src/run_analysis.py
 ```
-
-Если используешь локальное окружение из этой рабочей папки:
-
-```bash
-"/Users/yaroslavzinchenko/Documents/New project/.venv/bin/python" src/generate_data.py
-"/Users/yaroslavzinchenko/Documents/New project/.venv/bin/python" src/run_analysis.py
-```
-
 
 ## Где код анализа
 
