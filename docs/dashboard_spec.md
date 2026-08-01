@@ -1,72 +1,72 @@
-# Dashboard Specification
+# Спецификация дашборда StudyFlow
 
-## Page 1. Executive Overview
+## Экран 1. Обзор продукта
 
-Cards:
-- Users
-- Activation 7d
-- Paid conversion 14d
-- ARPU 30d
-- Retention 30d
-- Refund rate
-- Payment failed rate
+Карточки:
 
-Charts:
-- Funnel from signup to retention
-- Paid conversion by cohort month
-- Revenue and profit proxy by channel
+- активные пользователи;
+- активация за 7 дней;
+- конверсия в оплату за 14 дней;
+- ARPU за 30 дней;
+- удержание за 30 дней;
+- доля возвратов;
+- доля неуспешных платежей.
 
-Filters:
-- date/cohort month
-- channel
-- device
-- segment
-- experiment group
+Графики:
 
-## Page 2. Acquisition & Unit Economics
+- охват независимых продуктовых этапов от регистрации до удержания;
+- конверсия в оплату по месяцу когорты;
+- выручка и приближённая прибыль по каналу привлечения.
 
-Charts:
-- Users by channel
-- CAC / ROAS / profit proxy
-- Paid conversion by channel
-- Retention 30d by channel
+Фильтры: дата или месяц когорты, канал, устройство, сегмент, группа эксперимента.
 
-Decision question:
-- Which channels deserve more budget?
+> Этапы нельзя автоматически считать строгой последовательной воронкой: в синтетических данных отдельные события могут быть зафиксированы без предыдущего этапа. Перед публикацией нужна проверка вложенности условий.
 
-## Page 3. Product Funnel
+## Экран 2. Привлечение и юнит-экономика
 
-Charts:
-- Signup -> session -> lesson -> activation -> paywall -> trial -> paid
-- Funnel by device
-- Funnel by experiment group
+Графики:
 
-Decision question:
-- Where is product friction strongest?
+- пользователи по каналу;
+- CAC, ROAS и приближённая прибыль;
+- конверсия в оплату по каналу;
+- удержание за 30 дней по каналу.
 
-## Page 4. A/B Test
+Управленческий вопрос: какие каналы заслуживают дополнительного бюджета с учётом не только конверсии, но и экономики?
 
-Cards:
-- Control activation
-- Smart onboarding activation
-- Uplift pp
-- p-value
-- Guardrails
+## Экран 3. Пользовательский путь
 
-Charts:
-- Metric comparison by group
-- Segment-level uplift
+Графики:
 
-Decision question:
-- Can smart onboarding be rolled out?
+- регистрация → сессия → урок → активация → экран оплаты → пробный период → оплата;
+- охват этапов по устройству;
+- охват этапов по группе эксперимента.
 
-## Page 5. Support & Payment Diagnostics
+Управленческий вопрос: на каком проверенном последовательном переходе возникает наибольшее трение?
 
-Charts:
-- Payment failed rate by device
-- Support tickets by topic
-- CSAT by topic
-- Refund rate by segment
+## Экран 4. A/B-тест
 
-Decision question:
-- What operational issues block monetization?
+Карточки:
+
+- активация в контроле;
+- активация с умным онбордингом;
+- абсолютный эффект в процентных пунктах;
+- `p-value` и доверительный интервал;
+- защитные метрики.
+
+Графики:
+
+- сравнение метрик по группам;
+- эффект по сегментам с интервалами неопределённости.
+
+Управленческий вопрос: достаточно ли доказательств для внедрения умного онбординга и нет ли ухудшения защитных метрик?
+
+## Экран 5. Поддержка и диагностика платежей
+
+Графики:
+
+- доля неуспешных платежей по устройству;
+- обращения в поддержку по теме;
+- CSAT по теме;
+- доля возвратов по сегменту.
+
+Управленческий вопрос: какие операционные проблемы мешают монетизации и требуют отдельного расследования?
