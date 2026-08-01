@@ -1,4 +1,4 @@
-# Data Dictionary
+# Словарь данных
 
 ## users.csv
 
@@ -13,12 +13,12 @@
 - `prior_python_score`, `prior_sql_score` — стартовая оценка навыков.
 - `experiment_group` — группа A/B-теста.
 - `sessions_7d`, `lessons_started_7d`, `lessons_completed_7d`, `study_minutes_7d` — активность за первые 7 дней.
-- `activated_7d` — пользователь достиг activation definition.
-- `paywall_seen`, `trial_started`, `paid_14d` — monetization funnel.
+- `activated_7d` — пользователь выполнил условие активации.
+- `paywall_seen`, `trial_started`, `paid_14d` — события монетизации.
 - `monthly_price`, `revenue_30d` — цена и выручка.
-- `refund_30d`, `payment_failed` — payment guardrails.
-- `retained_30d`, `retained_60d`, `churned_60d` — retention/churn.
-- `support_tickets_30d`, `csat`, `nps_score` — support/customer experience.
+- `refund_30d`, `payment_failed` — защитные платёжные метрики.
+- `retained_30d`, `retained_60d`, `churned_60d` — удержание и отток.
+- `support_tickets_30d`, `csat`, `nps_score` — поддержка и пользовательский опыт.
 - `marketing_spend_user` — атрибутированные расходы на привлечение.
 - `is_test_account` — тестовый аккаунт.
 
@@ -32,7 +32,7 @@
 
 ## support_tickets.csv
 
-Тикеты поддержки: topic, priority, resolution_hours, csat.
+Обращения в поддержку: тема, приоритет, время решения и CSAT.
 
 ## marketing_spend.csv
 

@@ -1,4 +1,4 @@
-# Python, Statistics, A/B and SQL Code with Findings
+# Python, статистика, A/B-тест и SQL: код с выводами
 
 Этот файл отвечает на вопрос “где код?”. В проекте теперь есть отдельные readable-скрипты, notebook и отчёт с кодом.
 
@@ -35,7 +35,7 @@ missing_report = pd.DataFrame({'missing_rows': missing, 'missing_share': missing
 
 **Вывод:** `user_id` уникален, тестовые аккаунты исключены, основные пропуски находятся в `csat`, `age`, `region`. `csat` пропущен у пользователей без support ticket, поэтому это не ошибка, а особенность события.
 
-## 2. Product Analytics: KPI
+## 2. Продуктовая аналитика: KPI
 
 ```python
 kpi = pd.Series({
@@ -66,7 +66,7 @@ kpi = pd.Series({
 
 **Вывод:** activation уже высокая, но paid conversion заметно ниже activation. Главная продуктовая зона роста: связка `activation -> trial -> paid`.
 
-## 3. Product Funnel
+## 3. Охват продуктовых этапов
 
 ```python
 funnel = pd.DataFrame([
@@ -96,7 +96,7 @@ funnel['step_to_step_rate'] = funnel['users'] / funnel['users'].shift(1)
 
 **Вывод:** воронка показывает, что пользователь в основном доходит до обучения и paywall, но монетизация требует отдельной оптимизации.
 
-## 4. Channel Unit Economics
+## 4. Юнит-экономика каналов
 
 ```python
 channel = active_users.groupby('channel').agg(
@@ -127,7 +127,7 @@ channel['profit_proxy'] = channel['revenue_30d'] - channel['spend']
 
 **Вывод:** лучший канал по profit proxy: `organic`. Лучший канал по paid conversion: `email`. Это разные управленческие вопросы, поэтому нельзя выбирать канал только по одной метрике.
 
-## 5. Statistics: CI, t-test, chi-square, correlation
+## 5. Статистика: доверительный интервал, t-тест, хи-квадрат и корреляция
 
 ```python
 paid_cr = active_users['paid_14d'].mean()
@@ -162,7 +162,7 @@ corr = active_users['lessons_completed_7d'].corr(active_users['quiz_score_after'
 
 **Вывод:** статистика здесь разделена на causal и diagnostic. A/B можно трактовать причинно при корректной рандомизации. t-test, chi-square и correlation дают диагностические сигналы, но не доказывают причинность.
 
-## 6. A/B Test: Smart Onboarding
+## 6. A/B-тест умного онбординга
 
 ```python
 ab_summary = active_users.groupby('experiment_group').agg(
